@@ -14,26 +14,26 @@ export const Login = () => {
     }
 
     const handleSubmit = (e)=>{
-        e.preventDefault();
-        fetch(`https://reqres.in/api/login`, {
-            method: 'POST',
-            body: JSON.stringify(user),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => res.json())
-            .then((res) => {
-                if (res.token) {
-                    setIsLogin(true);
-                    setToken(res.token);
-                    console.log(token)
-                    toggleAuth(true);
-                    alert("login Successful")
+        // e.preventDefault();
+        // fetch(`https://reqres.in/api/login`, {
+        //     method: 'POST',
+        //     body: JSON.stringify(user),
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        //     .then((res) => res.json())
+        //     .then((res) => {
+        //         if (res.token) {
+        //             setIsLogin(true);
+        //             setToken(res.token);
+        //             console.log(token)
+        //             toggleAuth(true);
+        //             alert("login Successful")
                     
 
-                } 
-            })
+        //         } 
+        //     })
     }
    
 
