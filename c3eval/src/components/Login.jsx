@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/authContext";
+import { useNavigate } from "react-router-dom";
 
 
 export const Login = () => {
-  const [user, setUser] = useState({email:"", password:""});
-    const {toggleAuth, isLogin, setIsLogin} = useContext(AuthContext);
+  const [user, setUser] = useState({username:"", password:""});
+    const {handleAuth, isLogin, setIsLogin} = useContext(AuthContext);
     const [token, setToken] = useState("");
 
     const handleChange = (e)=>{
@@ -26,7 +27,8 @@ export const Login = () => {
                 if (res.token) {
                     setIsLogin(true);
                     setToken(res.token);
-                    toggleAuth();
+                    console.log(token)
+                    toggleAuth(true);
                     alert("login Successful")
                     
 
