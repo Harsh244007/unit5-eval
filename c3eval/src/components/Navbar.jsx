@@ -3,7 +3,7 @@ import {Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-      <div className="navbar" style={{ display: "flex", padding:"20px",margin:"20px 20px 20px 20px",height: "30px", justifyContent: "space-between" }}>
+      <div className="navbar" style={{ display: "flex", padding:"20px",margin:"20px 20px 20px 20px",height: "30px", justifyContent: "center" }}>
 
       <Link className="nav-home" to="/">
         Home
